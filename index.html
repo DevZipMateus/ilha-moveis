@@ -935,6 +935,62 @@
     /* ===== MOBILE MENU OVERLAY ===== */
     /* (mobile nav está em #mobileNav) */
 
+    /* ===== EFEITOS ===== */
+
+    /* --- Scroll Reveal --- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(36px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-40px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .reveal-right {
+      opacity: 0;
+      transform: translateX(40px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .reveal.visible,
+    .reveal-left.visible,
+    .reveal-right.visible {
+      opacity: 1;
+      transform: translate(0);
+    }
+    .delay-1 { transition-delay: 0.1s; }
+    .delay-2 { transition-delay: 0.2s; }
+    .delay-3 { transition-delay: 0.3s; }
+    .delay-4 { transition-delay: 0.4s; }
+    .delay-5 { transition-delay: 0.5s; }
+    .delay-6 { transition-delay: 0.6s; }
+
+    /* --- Hero entrada --- */
+    @keyframes heroFadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .hero-eyebrow { animation: heroFadeUp .7s ease both; animation-delay: .2s; }
+    #inicio h1    { animation: heroFadeUp .7s ease both; animation-delay: .4s; }
+    #inicio h2    { animation: heroFadeUp .7s ease both; animation-delay: .6s; }
+    .hero-btns    { animation: heroFadeUp .7s ease both; animation-delay: .8s; }
+    .hero-scroll  { animation: heroFadeUp .7s ease both; animation-delay: 1s;  }
+
+    /* --- Scroll Spy nav --- */
+    .nav-links a.active {
+      color: var(--accent-light) !important;
+    }
+
+    /* --- Stats hover pulse --- */
+    .stat-item {
+      transition: background .25s;
+      cursor: default;
+    }
+    .stat-item:hover {
+      background: rgba(255,255,255,0.06);
+    }
+
     /* ===== RESPONSIVIDADE ===== */
 
     /* 4K / Wide */
@@ -1157,7 +1213,7 @@
   <section id="sobre" aria-labelledby="sobre-title">
     <div class="container">
       <div class="sobre-grid">
-        <div class="sobre-img-wrap">
+        <div class="sobre-img-wrap reveal-left">
           <img
             src="images/sobre-bg.jpg"
             alt="Interior do showroom da Ilha Móveis com diversas peças em exposição"
@@ -1170,7 +1226,7 @@
           </div>
         </div>
 
-        <div class="sobre-content">
+        <div class="sobre-content reveal-right">
           <span class="section-tag">Nossa história</span>
           <h2 class="section-title" id="sobre-title">Mais de 18 anos mobilando lares em Guarujá</h2>
           <p class="section-subtitle">
@@ -1216,7 +1272,7 @@
   <!-- ===== PRODUTOS ===== -->
   <section id="produtos" aria-labelledby="produtos-title">
     <div class="container">
-      <header class="produtos-header">
+      <header class="produtos-header reveal">
         <span class="section-tag">Nossos produtos</span>
         <h2 class="section-title" id="produtos-title">Encontre tudo para o seu lar</h2>
         <p class="section-subtitle">De quartos completos a colchões ortopédicos, temos o que você precisa com qualidade e conforto garantidos.</p>
@@ -1224,7 +1280,7 @@
 
       <div class="produtos-grid">
 
-        <article class="produto-card">
+        <article class="produto-card reveal delay-1">
           <div class="produto-img-wrap">
             <img src="images/quarto-bg.jpg" alt="Quarto completo com cama king size e criados-mudos" loading="lazy">
             <div class="produto-overlay" aria-hidden="true"></div>
@@ -1235,7 +1291,7 @@
           </div>
         </article>
 
-        <article class="produto-card">
+        <article class="produto-card reveal delay-2">
           <div class="produto-img-wrap">
             <img src="images/hero-bg.jpg" alt="Sala de estar com sofá e mesa de centro modernos" loading="lazy">
             <div class="produto-overlay" aria-hidden="true"></div>
@@ -1246,7 +1302,7 @@
           </div>
         </article>
 
-        <article class="produto-card">
+        <article class="produto-card reveal delay-3">
           <div class="produto-img-wrap">
             <img src="images/colchao-bg.jpg" alt="Quarto com cama preparada e colchão de alta qualidade" loading="lazy">
             <div class="produto-overlay" aria-hidden="true"></div>
@@ -1257,7 +1313,7 @@
           </div>
         </article>
 
-        <article class="produto-card">
+        <article class="produto-card reveal delay-4">
           <div class="produto-img-wrap">
             <img src="images/contato-bg.jpg" alt="Sofá de couro caramelo em sala aconchegante" loading="lazy">
             <div class="produto-overlay" aria-hidden="true"></div>
@@ -1286,7 +1342,7 @@
   <!-- ===== DIFERENCIAIS ===== -->
   <section id="diferenciais" aria-labelledby="diferenciais-title">
     <div class="container">
-      <div class="diferenciais-header">
+      <div class="diferenciais-header reveal">
         <span class="section-tag">Por que nos escolher</span>
         <h2 class="section-title" id="diferenciais-title">Nossos diferenciais</h2>
         <p class="section-subtitle">Mais de 18 anos de experiência garantem qualidade, variedade e um atendimento que vai além da venda.</p>
@@ -1294,7 +1350,7 @@
 
       <div class="diferenciais-grid">
 
-        <div class="diferencial-card">
+        <div class="diferencial-card reveal delay-1">
           <div class="diferencial-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
@@ -1304,7 +1360,7 @@
           <p class="diferencial-desc">Desde 2006 no mercado, construímos nossa reputação com honestidade, qualidade e respeito ao cliente.</p>
         </div>
 
-        <div class="diferencial-card">
+        <div class="diferencial-card reveal delay-2">
           <div class="diferencial-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
               <circle cx="12" cy="12" r="10"/>
@@ -1315,7 +1371,7 @@
           <p class="diferencial-desc">Equipe dedicada para atender você de segunda a sábado, com o cuidado que cada cliente merece.</p>
         </div>
 
-        <div class="diferencial-card">
+        <div class="diferencial-card reveal delay-3">
           <div class="diferencial-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
               <rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
@@ -1326,7 +1382,7 @@
           <p class="diferencial-desc">Serviço de entrega para sua comodidade, garantindo que seus móveis cheguem com segurança.</p>
         </div>
 
-        <div class="diferencial-card">
+        <div class="diferencial-card reveal delay-4">
           <div class="diferencial-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
               <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 100 7h5a3.5 3.5 0 110 7H6"/>
@@ -1336,7 +1392,7 @@
           <p class="diferencial-desc">Parcelamento e formas de pagamento pensadas para caber no seu orçamento sem complicação.</p>
         </div>
 
-        <div class="diferencial-card">
+        <div class="diferencial-card reveal delay-5">
           <div class="diferencial-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
               <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
@@ -1346,7 +1402,7 @@
           <p class="diferencial-desc">Nossa loja foi pensada para que você explore os produtos com calma e tranquilidade.</p>
         </div>
 
-        <div class="diferencial-card">
+        <div class="diferencial-card reveal delay-6">
           <div class="diferencial-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
               <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
@@ -1364,7 +1420,7 @@
   <section id="localizacao" aria-labelledby="localizacao-title">
     <div class="container">
       <div class="localizacao-grid">
-        <div class="localizacao-info">
+        <div class="localizacao-info reveal-left">
           <span class="section-tag">Visite-nos</span>
           <h2 class="section-title" id="localizacao-title">Onde estamos</h2>
           <p class="section-subtitle">
@@ -1410,7 +1466,7 @@
           </div>
         </div>
 
-        <div class="mapa-wrap">
+        <div class="mapa-wrap reveal-right">
           <iframe
             title="Localização da Ilha Móveis — Av. dos Caiçaras, 1100, Guarujá-SP"
             src="https://maps.google.com/maps?q=Av+dos+Caicaras+1100+Guaruja+SP+Brasil&output=embed&z=15&hl=pt-BR"
@@ -1426,7 +1482,7 @@
   <!-- ===== CONTATO ===== -->
   <section id="contato" aria-labelledby="contato-title">
     <div class="container">
-      <div class="contato-header">
+      <div class="contato-header reveal">
         <span class="section-tag">Fale conosco</span>
         <h2 class="section-title" id="contato-title">Entre em contato</h2>
         <p class="section-subtitle">Tire suas dúvidas, solicite informações ou venha nos visitar. Estamos prontos para ajudar!</p>
@@ -1434,7 +1490,7 @@
 
       <div class="contato-cards">
 
-        <div class="contato-card">
+        <div class="contato-card reveal delay-1">
           <div class="contato-card-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 9.82 19.79 19.79 0 01.07 1.18 2 2 0 012.07 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
           </div>
@@ -1442,7 +1498,7 @@
           <p><a href="https://wa.me/5513997459548" target="_blank" rel="noopener noreferrer">(13) 99745-9548</a></p>
         </div>
 
-        <div class="contato-card">
+        <div class="contato-card reveal delay-2">
           <div class="contato-card-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           </div>
@@ -1450,7 +1506,7 @@
           <p><a href="mailto:ilhamoveisecolchoes@gmail.com">ilhamoveisecolchoes@gmail.com</a></p>
         </div>
 
-        <div class="contato-card">
+        <div class="contato-card reveal delay-3">
           <div class="contato-card-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
           </div>
@@ -1564,6 +1620,67 @@
     }
     setVitrineHeight();
     window.addEventListener('resize', setVitrineHeight, { passive: true });
+
+    // ===== SCROLL REVEAL =====
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => {
+      revealObserver.observe(el);
+    });
+
+    // ===== CONTAGEM ANIMADA NOS STATS =====
+    function animateCounter(el, target, suffix, prefix, duration) {
+      const start = 0;
+      const step  = target / (duration / 16);
+      let current = start;
+      const update = () => {
+        current = Math.min(current + step, target);
+        el.textContent = prefix + Math.round(current) + suffix;
+        if (current < target) requestAnimationFrame(update);
+      };
+      requestAnimationFrame(update);
+    }
+
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        statsObserver.unobserve(entry.target);
+        const nums = entry.target.querySelectorAll('.stat-number');
+        nums.forEach(el => {
+          const text = el.textContent.trim();
+          const prefix = text.startsWith('+') ? '+' : '';
+          const suffix = text.endsWith('%') ? '%' : '';
+          const num = parseInt(text.replace(/[^0-9]/g, ''));
+          animateCounter(el, num, suffix, prefix, 1600);
+        });
+      });
+    }, { threshold: 0.5 });
+
+    const statsSection = document.getElementById('stats');
+    if (statsSection) statsObserver.observe(statsSection);
+
+    // ===== SCROLL SPY — nav link ativo =====
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+
+    const spyObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(a => a.classList.remove('active'));
+          const active = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+
+    sections.forEach(s => spyObserver.observe(s));
 
     // ===== SCROLL SUAVE PARA ÂNCORAS =====
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
