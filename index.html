@@ -1,0 +1,1575 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ilha Móveis — Móveis e Colchões em Guarujá-SP</title>
+  <meta name="description" content="Ilha Móveis e Colchões — desde 2006 em Guarujá-SP com móveis e colchões de qualidade para transformar seu lar. Visite nossa loja na Av. dos Caiçaras, 1100.">
+  <meta name="keywords" content="ilha móveis, colchões guarujá, móveis guarujá, loja de móveis guarujá, colchões guarujá sp, móveis jardim las palmas, ilha móveis e colchões">
+  <meta name="author" content="Ilha Móveis e Colchões">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ilhamoveis.com.br/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ilha Móveis — Móveis e Colchões em Guarujá-SP">
+  <meta property="og:description" content="Desde 2006 em Guarujá-SP com móveis e colchões de qualidade. Conforto e estilo para o seu lar.">
+  <meta property="og:url" content="https://ilhamoveis.com.br/">
+  <meta property="og:image" content="images/og-image.jpg">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Ilha Móveis">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ilha Móveis — Móveis e Colchões em Guarujá-SP">
+  <meta name="twitter:description" content="Desde 2006 em Guarujá-SP com móveis e colchões de qualidade.">
+  <meta name="twitter:image" content="images/og-image.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===== RESET & VARIÁVEIS ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --brown-900: #2C1A0E;
+      --brown-700: #5B3219;
+      --brown-500: #8B5E3C;
+      --brown-300: #C49A6C;
+      --brown-100: #F5EDE3;
+      --cream: #FBF7F3;
+      --white: #FFFFFF;
+      --accent: #B8882A;
+      --accent-light: #D4AA5A;
+      --text-dark: #1A0E06;
+      --text-mid: #4A3322;
+      --text-muted: #7A6355;
+      --header-h: 72px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-dark);
+      background: var(--white);
+      line-height: 1.65;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    /* ===== UTILITÁRIOS ===== */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--brown-900);
+      margin-bottom: 16px;
+    }
+
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 580px;
+      line-height: 1.7;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: 4px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+      border: 2px solid transparent;
+    }
+
+    .btn:hover { transform: translateY(-1px); }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--white);
+      border-color: var(--accent);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-light);
+      border-color: var(--accent-light);
+      box-shadow: 0 4px 14px rgba(184,136,42,0.4);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border-color: rgba(255,255,255,0.75);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.12);
+      border-color: var(--white);
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: var(--header-h);
+      background: rgba(44, 26, 14, 0.96);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      transition: background 0.3s;
+    }
+
+    header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    /* Logo */
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--white);
+    }
+
+    .logo-icon {
+      width: 38px;
+      height: 38px;
+      flex-shrink: 0;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+
+    .logo-text .brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 0.02em;
+    }
+
+    .logo-text .tagline {
+      font-size: 0.62rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--brown-300);
+      margin-top: 2px;
+    }
+
+    /* Nav */
+    nav#navMenu ul {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    nav#navMenu ul a {
+      display: block;
+      padding: 8px 14px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.82);
+      border-radius: 4px;
+      transition: color 0.2s, background 0.2s;
+    }
+
+    nav#navMenu ul a:hover {
+      color: var(--white);
+      background: rgba(255,255,255,0.08);
+    }
+
+    .nav-cta {
+      background: var(--accent) !important;
+      color: var(--white) !important;
+      padding: 8px 18px !important;
+    }
+
+    .nav-cta:hover {
+      background: var(--accent-light) !important;
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      border-radius: 4px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: transform 0.25s, opacity 0.25s;
+    }
+
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ===== HERO ===== */
+    #inicio {
+      min-height: 100vh;
+      background:
+        linear-gradient(rgba(44, 26, 14, 0.72), rgba(44, 26, 14, 0.72)),
+        url('images/hero-bg.jpg') center / cover no-repeat;
+      background-attachment: fixed, fixed;
+      display: flex;
+      align-items: center;
+      padding-top: var(--header-h);
+      position: relative;
+    }
+
+    .hero-content {
+      max-width: 700px;
+      padding: 80px 0;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--brown-300);
+      margin-bottom: 18px;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 1px;
+      background: var(--brown-300);
+    }
+
+    #inicio h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 6vw, 4.2rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    #inicio h2 {
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      font-weight: 400;
+      color: rgba(255,255,255,0.82);
+      line-height: 1.7;
+      margin-bottom: 38px;
+      max-width: 560px;
+    }
+
+    .hero-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      color: rgba(255,255,255,0.5);
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .hero-scroll-line {
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.5));
+    }
+
+    /* ===== STATS ===== */
+    #stats {
+      background: var(--brown-700);
+      padding: 0;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .stat-item {
+      padding: 32px 24px;
+      text-align: center;
+      border-right: 1px solid rgba(255,255,255,0.08);
+      transition: background 0.2s;
+    }
+
+    .stat-item:last-child { border-right: none; }
+
+    .stat-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--accent-light);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .stat-label {
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: rgba(255,255,255,0.7);
+      text-transform: uppercase;
+    }
+
+    /* ===== SOBRE ===== */
+    #sobre {
+      padding: 100px 0;
+      background: var(--white);
+    }
+
+    .sobre-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+
+    .sobre-img-wrap {
+      position: relative;
+    }
+
+    .sobre-img-main {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+
+    .sobre-badge {
+      position: absolute;
+      bottom: -28px;
+      right: -28px;
+      background: var(--brown-700);
+      color: var(--white);
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 24px rgba(91,50,25,0.4);
+    }
+
+    .sobre-badge .anos {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1;
+      color: var(--accent-light);
+    }
+
+    .sobre-badge .anos-texto {
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.8);
+      text-align: center;
+      margin-top: 4px;
+    }
+
+    .sobre-content .section-subtitle {
+      margin-bottom: 24px;
+    }
+
+    .sobre-destaque {
+      margin: 28px 0;
+      padding: 20px 24px;
+      border-left: 4px solid var(--accent);
+      background: var(--brown-100);
+      border-radius: 0 4px 4px 0;
+    }
+
+    .sobre-destaque p {
+      font-size: 1rem;
+      font-style: italic;
+      color: var(--brown-700);
+      line-height: 1.7;
+    }
+
+    .sobre-itens {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .sobre-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.9rem;
+      color: var(--text-mid);
+    }
+
+    .sobre-item-icon {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      color: var(--accent);
+      margin-top: 1px;
+    }
+
+    /* ===== PRODUTOS ===== */
+    #produtos {
+      padding: 100px 0;
+      background: var(--cream);
+    }
+
+    .produtos-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .produtos-header .section-subtitle {
+      margin: 0 auto;
+    }
+
+    .produtos-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .produto-card {
+      border-radius: 6px;
+      overflow: hidden;
+      background: var(--white);
+      box-shadow: 0 2px 12px rgba(44,26,14,0.08);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .produto-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 28px rgba(44,26,14,0.14);
+    }
+
+    .produto-img-wrap {
+      position: relative;
+      height: 200px;
+      overflow: hidden;
+    }
+
+    .produto-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s;
+    }
+
+    .produto-card:hover .produto-img-wrap img {
+      transform: scale(1.05);
+    }
+
+    .produto-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(44,26,14,0.55) 0%, transparent 60%);
+    }
+
+    .produto-body {
+      padding: 20px;
+    }
+
+    .produto-nome {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--brown-900);
+      margin-bottom: 8px;
+    }
+
+    .produto-desc {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ===== DIFERENCIAIS ===== */
+    #diferenciais {
+      padding: 100px 0;
+      background:
+        linear-gradient(rgba(44, 26, 14, 0.88), rgba(44, 26, 14, 0.88)),
+        url('images/sobre-bg.jpg') center / cover no-repeat;
+      background-attachment: fixed, fixed;
+    }
+
+    .diferenciais-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .diferenciais-header .section-title {
+      color: var(--white);
+    }
+
+    .diferenciais-header .section-subtitle {
+      color: rgba(255,255,255,0.7);
+      margin: 0 auto;
+    }
+
+    .diferenciais-header .section-tag {
+      color: var(--accent-light);
+    }
+
+    .diferenciais-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .diferencial-card {
+      padding: 36px 28px;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 6px;
+      background: rgba(255,255,255,0.04);
+      transition: background 0.25s, border-color 0.25s;
+      text-align: center;
+    }
+
+    .diferencial-card:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(184,136,42,0.4);
+    }
+
+    .diferencial-icon {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 20px;
+      background: rgba(184,136,42,0.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .diferencial-icon svg {
+      width: 26px;
+      height: 26px;
+      color: var(--accent-light);
+    }
+
+    .diferencial-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+
+    .diferencial-desc {
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.7;
+    }
+
+    /* ===== LOCALIZAÇÃO ===== */
+    #localizacao {
+      padding: 100px 0;
+      background: var(--white);
+    }
+
+    .localizacao-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .localizacao-info .section-subtitle {
+      margin-bottom: 36px;
+    }
+
+    .info-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .info-card {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      padding: 20px;
+      border: 1px solid #EDE5DB;
+      border-radius: 6px;
+      background: var(--brown-100);
+      transition: border-color 0.2s;
+    }
+
+    .info-card:hover { border-color: var(--accent); }
+
+    .info-card-icon {
+      width: 42px;
+      height: 42px;
+      flex-shrink: 0;
+      background: var(--brown-700);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .info-card-icon svg {
+      width: 20px;
+      height: 20px;
+      color: var(--white);
+    }
+
+    .info-card-body h4 {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .info-card-body p, .info-card-body a {
+      font-size: 0.95rem;
+      color: var(--text-mid);
+      line-height: 1.5;
+    }
+
+    .info-card-body a:hover { color: var(--accent); }
+
+    .mapa-wrap {
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(44,26,14,0.12);
+      height: 440px;
+    }
+
+    .mapa-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* ===== CONTATO ===== */
+    #contato {
+      padding: 100px 0;
+      background: var(--brown-100);
+    }
+
+    .contato-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .contato-header .section-subtitle {
+      margin: 0 auto;
+    }
+
+    .contato-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .contato-card {
+      background: var(--white);
+      border-radius: 8px;
+      padding: 36px 28px;
+      text-align: center;
+      box-shadow: 0 2px 12px rgba(44,26,14,0.07);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .contato-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(44,26,14,0.12);
+    }
+
+    .contato-card-icon {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 20px;
+      background: var(--brown-100);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contato-card-icon svg {
+      width: 28px;
+      height: 28px;
+      color: var(--brown-700);
+    }
+
+    .contato-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--brown-900);
+      margin-bottom: 10px;
+    }
+
+    .contato-card p, .contato-card a {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .contato-card a:hover { color: var(--accent); }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--brown-900);
+      padding: 60px 0 0;
+      color: rgba(255,255,255,0.75);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .footer-brand .logo {
+      margin-bottom: 16px;
+    }
+
+    .footer-brand p {
+      font-size: 0.875rem;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.55);
+      max-width: 300px;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .footer-social a {
+      width: 38px;
+      height: 38px;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .footer-social a:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .footer-social svg {
+      width: 16px;
+      height: 16px;
+      color: var(--white);
+    }
+
+    .footer-col h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 18px;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-col ul li a {
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.55);
+      transition: color 0.2s;
+    }
+
+    .footer-col ul li a:hover { color: var(--accent-light); }
+
+    .footer-col address {
+      font-style: normal;
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.8;
+    }
+
+    .footer-bottom {
+      padding: 20px 0;
+      text-align: center;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.35);
+    }
+
+    /* MonteSite Badge */
+    #montesite-footer-badge {
+      display: flex;
+      justify-content: center;
+      padding: 12px 0 4px;
+    }
+
+    /* ===== WHATSAPP FLUTUANTE ===== */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      width: 54px;
+      height: 54px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 3px 14px rgba(37,211,102,0.45);
+      z-index: 900;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .whatsapp-float:hover {
+      background: #20bc5a;
+      transform: scale(1.07);
+    }
+
+    .whatsapp-float svg {
+      width: 28px;
+      height: 28px;
+      color: var(--white);
+    }
+
+    /* ===== MOBILE MENU OVERLAY ===== */
+    nav#navMenu.mobile-open {
+      display: block !important;
+      position: fixed;
+      top: var(--header-h);
+      left: 0; right: 0; bottom: 0;
+      background: rgba(44, 26, 14, 0.98);
+      z-index: 999;
+      overflow-y: auto;
+      padding: 24px;
+    }
+
+    nav#navMenu.mobile-open ul {
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    nav#navMenu.mobile-open ul a {
+      font-size: 1.1rem;
+      padding: 14px 16px;
+    }
+
+    /* ===== RESPONSIVIDADE ===== */
+
+    /* 4K / Wide */
+    @media (min-width: 1440px) {
+      .container { max-width: 1360px; }
+    }
+
+    /* Tablet Landscape */
+    @media (max-width: 1023px) {
+      #inicio {
+        background-attachment: scroll, scroll;
+      }
+      #diferenciais {
+        background-attachment: scroll, scroll;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stat-item:nth-child(2) { border-right: none; }
+      .stat-item:nth-child(3) { border-top: 1px solid rgba(255,255,255,0.08); }
+
+      .sobre-grid { gap: 48px; }
+
+      .produtos-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .diferenciais-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .localizacao-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .mapa-wrap { order: -1; }
+
+      .contato-cards {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 36px;
+      }
+
+      .footer-brand { grid-column: 1 / -1; }
+    }
+
+    /* Tablet Portrait */
+    @media (max-width: 768px) {
+      :root { --header-h: 62px; }
+
+      .hamburger { display: flex; }
+
+      nav#navMenu {
+        display: none;
+      }
+
+      .sobre-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .sobre-img-main { height: 360px; }
+      .sobre-badge { right: 16px; bottom: -20px; width: 96px; height: 96px; }
+      .sobre-badge .anos { font-size: 1.5rem; }
+
+      .sobre-itens { grid-template-columns: 1fr; }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .diferenciais-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contato-cards {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .footer-brand { grid-column: auto; }
+
+      #sobre, #produtos, #diferenciais, #localizacao, #contato {
+        padding: 72px 0;
+      }
+    }
+
+    /* Mobile */
+    @media (max-width: 480px) {
+      .hero-btns { flex-direction: column; }
+      .btn { justify-content: center; }
+
+      .stats-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .stat-item {
+        padding: 24px 16px;
+      }
+
+      .stat-number { font-size: 1.9rem; }
+
+      .produtos-grid {
+        grid-template-columns: 1fr;
+        max-width: 360px;
+        margin: 0 auto;
+      }
+
+      .mapa-wrap { height: 300px; }
+
+      #sobre, #produtos, #diferenciais, #localizacao, #contato {
+        padding: 56px 0;
+      }
+
+      .whatsapp-float { bottom: 20px; right: 20px; width: 48px; height: 48px; }
+    }
+
+    /* Mobile pequeno */
+    @media (max-width: 360px) {
+      .container { padding: 0 16px; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+      .stat-item { padding: 20px 12px; }
+      .stat-number { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="container">
+      <a href="#inicio" class="logo" aria-label="Ilha Móveis - Página inicial">
+        <!-- SVG Logo: ícone de ilha estilizado -->
+        <svg class="logo-icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="19" cy="19" r="19" fill="rgba(184,136,42,0.15)"/>
+          <!-- palmeira simplificada -->
+          <line x1="19" y1="28" x2="19" y2="14" stroke="#C49A6C" stroke-width="2" stroke-linecap="round"/>
+          <path d="M19 14 C14 10 10 11 11 15 C13 12 17 13 19 14Z" fill="#C49A6C"/>
+          <path d="M19 14 C24 10 28 11 27 15 C25 12 21 13 19 14Z" fill="#C49A6C"/>
+          <path d="M19 14 C17 8 18 5 21 6 C19 8 19 11 19 14Z" fill="#C49A6C"/>
+          <!-- água/ilha -->
+          <ellipse cx="19" cy="29.5" rx="8" ry="2.5" fill="#C49A6C" opacity="0.5"/>
+          <path d="M11 29.5 Q14 27 17 29.5 Q20 32 23 29.5 Q26 27 27 29.5" stroke="#C49A6C" stroke-width="1" fill="none" opacity="0.8"/>
+        </svg>
+        <div class="logo-text">
+          <span class="brand">Ilha Móveis</span>
+          <span class="tagline">e colchões</span>
+        </div>
+      </a>
+
+      <button class="hamburger" id="menuBtn" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="navMenu" role="navigation" aria-label="Menu principal">
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#produtos">Produtos</a></li>
+          <li><a href="#diferenciais">Diferenciais</a></li>
+          <li><a href="#localizacao">Localização</a></li>
+          <li><a href="#contato" class="nav-cta">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section id="inicio" aria-labelledby="hero-title">
+    <div class="container">
+      <div class="hero-content">
+        <p class="hero-eyebrow">Desde 2006 em Guarujá-SP</p>
+        <h1 id="hero-title">Ilha Móveis</h1>
+        <h2>Conforto, qualidade e estilo para transformar cada canto do seu lar. Venha descobrir nossa seleção de móveis e colchões em Guarujá.</h2>
+        <div class="hero-btns">
+          <a href="#produtos" class="btn btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            Ver produtos
+          </a>
+          <a href="#localizacao" class="btn btn-outline">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Como chegar
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll" aria-hidden="true">
+      <div class="hero-scroll-line"></div>
+      <span>Rolar</span>
+    </div>
+  </section>
+
+  <!-- ===== STATS ===== -->
+  <section id="stats" aria-label="Números da empresa">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-number">+18</div>
+        <div class="stat-label">Anos de tradição</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">2006</div>
+        <div class="stat-label">Fundação em Guarujá</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">100%</div>
+        <div class="stat-label">Dedicação ao cliente</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">1</div>
+        <div class="stat-label">Endereço, fácil de achar</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SOBRE ===== -->
+  <section id="sobre" aria-labelledby="sobre-title">
+    <div class="container">
+      <div class="sobre-grid">
+        <div class="sobre-img-wrap">
+          <img
+            src="images/sobre-bg.jpg"
+            alt="Interior do showroom da Ilha Móveis com diversas peças em exposição"
+            class="sobre-img-main"
+            loading="lazy"
+          >
+          <div class="sobre-badge" aria-hidden="true">
+            <span class="anos">+18</span>
+            <span class="anos-texto">anos no<br>mercado</span>
+          </div>
+        </div>
+
+        <div class="sobre-content">
+          <span class="section-tag">Nossa história</span>
+          <h2 class="section-title" id="sobre-title">Mais de 18 anos mobilando lares em Guarujá</h2>
+          <p class="section-subtitle">
+            Desde 2006, a Ilha Móveis e Colchões é referência em qualidade e bom atendimento no litoral paulista.
+            Oferecemos uma ampla seleção de móveis e colchões para todos os ambientes da sua casa.
+          </p>
+
+          <div class="sobre-destaque">
+            <p>"Nosso compromisso é transformar a sua casa em um lar aconchegante, com produtos de qualidade e preços justos."</p>
+          </div>
+
+          <div class="sobre-itens">
+            <div class="sobre-item">
+              <svg class="sobre-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Móveis para todos os ambientes</span>
+            </div>
+            <div class="sobre-item">
+              <svg class="sobre-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Colchões de alta qualidade</span>
+            </div>
+            <div class="sobre-item">
+              <svg class="sobre-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Atendimento personalizado</span>
+            </div>
+            <div class="sobre-item">
+              <svg class="sobre-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Tradição e confiança desde 2006</span>
+            </div>
+            <div class="sobre-item">
+              <svg class="sobre-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Localização central no Guarujá</span>
+            </div>
+            <div class="sobre-item">
+              <svg class="sobre-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Opções para todos os estilos</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRODUTOS ===== -->
+  <section id="produtos" aria-labelledby="produtos-title">
+    <div class="container">
+      <header class="produtos-header">
+        <span class="section-tag">Nossos produtos</span>
+        <h2 class="section-title" id="produtos-title">Encontre tudo para o seu lar</h2>
+        <p class="section-subtitle">De quartos completos a colchões ortopédicos, temos o que você precisa com qualidade e conforto garantidos.</p>
+      </header>
+
+      <div class="produtos-grid">
+
+        <article class="produto-card">
+          <div class="produto-img-wrap">
+            <img src="images/quarto-bg.jpg" alt="Quarto completo com cama king size e criados-mudos" loading="lazy">
+            <div class="produto-overlay" aria-hidden="true"></div>
+          </div>
+          <div class="produto-body">
+            <h3 class="produto-nome">Quartos</h3>
+            <p class="produto-desc">Camas, guarda-roupas, criados-mudos e cômodas para criar o dormitório dos seus sonhos.</p>
+          </div>
+        </article>
+
+        <article class="produto-card">
+          <div class="produto-img-wrap">
+            <img src="images/hero-bg.jpg" alt="Sala de estar com sofá e mesa de centro modernos" loading="lazy">
+            <div class="produto-overlay" aria-hidden="true"></div>
+          </div>
+          <div class="produto-body">
+            <h3 class="produto-nome">Salas</h3>
+            <p class="produto-desc">Sofás, poltronas, estantes, mesas de centro e racks para uma sala elegante e funcional.</p>
+          </div>
+        </article>
+
+        <article class="produto-card">
+          <div class="produto-img-wrap">
+            <img src="images/colchao-bg.jpg" alt="Quarto com cama preparada e colchão de alta qualidade" loading="lazy">
+            <div class="produto-overlay" aria-hidden="true"></div>
+          </div>
+          <div class="produto-body">
+            <h3 class="produto-nome">Colchões</h3>
+            <p class="produto-desc">Colchões ortopédicos, de molas e de espuma em diversas medidas para um sono de qualidade.</p>
+          </div>
+        </article>
+
+        <article class="produto-card">
+          <div class="produto-img-wrap">
+            <img src="images/contato-bg.jpg" alt="Sofá de couro caramelo em sala aconchegante" loading="lazy">
+            <div class="produto-overlay" aria-hidden="true"></div>
+          </div>
+          <div class="produto-body">
+            <h3 class="produto-nome">Sofás e estofados</h3>
+            <p class="produto-desc">Grande variedade de sofás, chaise e poltronas com tecidos e couros em diferentes modelos.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DIFERENCIAIS ===== -->
+  <section id="diferenciais" aria-labelledby="diferenciais-title">
+    <div class="container">
+      <div class="diferenciais-header">
+        <span class="section-tag">Por que nos escolher</span>
+        <h2 class="section-title" id="diferenciais-title">Nossos diferenciais</h2>
+        <p class="section-subtitle">Mais de 18 anos de experiência garantem qualidade, variedade e um atendimento que vai além da venda.</p>
+      </div>
+
+      <div class="diferenciais-grid">
+
+        <div class="diferencial-card">
+          <div class="diferencial-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3 class="diferencial-title">Tradição e confiança</h3>
+          <p class="diferencial-desc">Desde 2006 no mercado, construímos nossa reputação com honestidade, qualidade e respeito ao cliente.</p>
+        </div>
+
+        <div class="diferencial-card">
+          <div class="diferencial-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 8v4l3 3"/>
+            </svg>
+          </div>
+          <h3 class="diferencial-title">Atendimento ágil</h3>
+          <p class="diferencial-desc">Equipe dedicada para atender você de segunda a sábado, com o cuidado que cada cliente merece.</p>
+        </div>
+
+        <div class="diferencial-card">
+          <div class="diferencial-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+              <circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
+            </svg>
+          </div>
+          <h3 class="diferencial-title">Entrega na sua casa</h3>
+          <p class="diferencial-desc">Serviço de entrega para sua comodidade, garantindo que seus móveis cheguem com segurança.</p>
+        </div>
+
+        <div class="diferencial-card">
+          <div class="diferencial-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 100 7h5a3.5 3.5 0 110 7H6"/>
+            </svg>
+          </div>
+          <h3 class="diferencial-title">Condições facilitadas</h3>
+          <p class="diferencial-desc">Parcelamento e formas de pagamento pensadas para caber no seu orçamento sem complicação.</p>
+        </div>
+
+        <div class="diferencial-card">
+          <div class="diferencial-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+            </svg>
+          </div>
+          <h3 class="diferencial-title">Ambiente acolhedor</h3>
+          <p class="diferencial-desc">Nossa loja foi pensada para que você explore os produtos com calma e tranquilidade.</p>
+        </div>
+
+        <div class="diferencial-card">
+          <div class="diferencial-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+            </svg>
+          </div>
+          <h3 class="diferencial-title">Qualidade garantida</h3>
+          <p class="diferencial-desc">Trabalhamos com marcas e fornecedores selecionados, assegurando durabilidade e conforto em cada produto.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LOCALIZAÇÃO ===== -->
+  <section id="localizacao" aria-labelledby="localizacao-title">
+    <div class="container">
+      <div class="localizacao-grid">
+        <div class="localizacao-info">
+          <span class="section-tag">Visite-nos</span>
+          <h2 class="section-title" id="localizacao-title">Onde estamos</h2>
+          <p class="section-subtitle">
+            Nossa loja fica em localização privilegiada em Guarujá-SP, de fácil acesso. Venha nos visitar!
+          </p>
+
+          <div class="info-cards">
+            <div class="info-card">
+              <div class="info-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="info-card-body">
+                <h4>Endereço</h4>
+                <address>
+                  Av. dos Caiçaras, 1100<br>
+                  Jardim Las Palmas — Astúrias<br>
+                  Guarujá-SP
+                </address>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div class="info-card-body">
+                <h4>Horário de funcionamento</h4>
+                <p>Segunda a sexta: 9h às 19h</p>
+                <p>Sábado: 9h às 17h</p>
+                <p>Domingo: fechado</p>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 9.82 19.79 19.79 0 01.07 1.18 2 2 0 012.07 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+              </div>
+              <div class="info-card-body">
+                <h4>Contato</h4>
+                <p><a href="mailto:ilhamoveisecolchoes@gmail.com">ilhamoveisecolchoes@gmail.com</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mapa-wrap">
+          <iframe
+            title="Localização da Ilha Móveis — Av. dos Caiçaras, 1100, Guarujá-SP"
+            src="https://maps.google.com/maps?q=Av+dos+Caicaras+1100+Guaruja+SP+Brasil&output=embed&z=15&hl=pt-BR"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTATO ===== -->
+  <section id="contato" aria-labelledby="contato-title">
+    <div class="container">
+      <div class="contato-header">
+        <span class="section-tag">Fale conosco</span>
+        <h2 class="section-title" id="contato-title">Entre em contato</h2>
+        <p class="section-subtitle">Tire suas dúvidas, solicite informações ou venha nos visitar. Estamos prontos para ajudar!</p>
+      </div>
+
+      <div class="contato-cards">
+
+        <div class="contato-card">
+          <div class="contato-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 9.82 19.79 19.79 0 01.07 1.18 2 2 0 012.07 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+          </div>
+          <h3>WhatsApp</h3>
+          <!-- SUBSTITUIR pelo número real quando disponível -->
+          <p>Entre em contato pelo nosso WhatsApp para tirar dúvidas e verificar disponibilidade de produtos.</p>
+        </div>
+
+        <div class="contato-card">
+          <div class="contato-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <h3>E-mail</h3>
+          <p><a href="mailto:ilhamoveisecolchoes@gmail.com">ilhamoveisecolchoes@gmail.com</a></p>
+        </div>
+
+        <div class="contato-card">
+          <div class="contato-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </div>
+          <h3>Instagram</h3>
+          <p><a href="https://instagram.com/ilhamoveis_ecolchoes" target="_blank" rel="noopener noreferrer">@ilhamoveis_ecolchoes</a></p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#inicio" class="logo" aria-label="Ilha Móveis - Topo da página">
+            <svg class="logo-icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="19" cy="19" r="19" fill="rgba(184,136,42,0.12)"/>
+              <line x1="19" y1="28" x2="19" y2="14" stroke="#C49A6C" stroke-width="2" stroke-linecap="round"/>
+              <path d="M19 14 C14 10 10 11 11 15 C13 12 17 13 19 14Z" fill="#C49A6C"/>
+              <path d="M19 14 C24 10 28 11 27 15 C25 12 21 13 19 14Z" fill="#C49A6C"/>
+              <path d="M19 14 C17 8 18 5 21 6 C19 8 19 11 19 14Z" fill="#C49A6C"/>
+              <ellipse cx="19" cy="29.5" rx="8" ry="2.5" fill="#C49A6C" opacity="0.5"/>
+            </svg>
+            <div class="logo-text">
+              <span class="brand">Ilha Móveis</span>
+              <span class="tagline">e colchões</span>
+            </div>
+          </a>
+          <p>Móveis e colchões de qualidade para transformar sua casa em um lar. Tradição e confiança em Guarujá desde 2006.</p>
+          <div class="footer-social">
+            <a href="https://instagram.com/ilhamoveis_ecolchoes" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Ilha Móveis">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">Sobre nós</a></li>
+            <li><a href="#produtos">Produtos</a></li>
+            <li><a href="#diferenciais">Diferenciais</a></li>
+            <li><a href="#localizacao">Localização</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Informações</h4>
+          <address>
+            Av. dos Caiçaras, 1100<br>
+            Jardim Las Palmas — Astúrias<br>
+            Guarujá-SP<br><br>
+            <strong style="color:rgba(255,255,255,0.65)">Segunda a sexta:</strong> 9h–19h<br>
+            <strong style="color:rgba(255,255,255,0.65)">Sábado:</strong> 9h–17h<br><br>
+            <a href="mailto:ilhamoveisecolchoes@gmail.com" style="color:rgba(255,255,255,0.55)">ilhamoveisecolchoes@gmail.com</a>
+          </address>
+        </div>
+      </div>
+
+      <div id="montesite-footer-badge"></div>
+
+      <div class="footer-bottom">
+        <p>© 2025 Ilha Móveis e Colchões · CNPJ 39.377.702/0001-24 · Guarujá-SP</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== WHATSAPP FLUTUANTE ===== -->
+  <!-- SUBSTITUIR o número abaixo pelo WhatsApp real da empresa -->
+  <a
+    href="https://wa.me/55XXXXXXXXXXX"
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Fale conosco pelo WhatsApp"
+    title="Fale pelo WhatsApp"
+  >
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <script>
+    // ===== MENU MOBILE =====
+    const menuBtn = document.getElementById('menuBtn');
+    const navMenu = document.getElementById('navMenu');
+
+    menuBtn.addEventListener('click', () => {
+      const isOpen = navMenu.classList.toggle('mobile-open');
+      menuBtn.classList.toggle('open', isOpen);
+      menuBtn.setAttribute('aria-expanded', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+
+    // Fechar menu ao clicar em link
+    navMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('mobile-open');
+        menuBtn.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
+    });
+
+    // ===== HEADER SCROLL =====
+    const header = document.querySelector('header');
+    window.addEventListener('scroll', () => {
+      header.style.background = window.scrollY > 60
+        ? 'rgba(44, 26, 14, 0.98)'
+        : 'rgba(44, 26, 14, 0.96)';
+    }, { passive: true });
+
+    // ===== SCROLL SUAVE PARA ÂNCORAS =====
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', e => {
+        const href = anchor.getAttribute('href');
+        if (href === '#') return;
+        const target = document.querySelector(href);
+        if (!target) return;
+        e.preventDefault();
+        const headerH = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-h'));
+        const top = target.getBoundingClientRect().top + window.scrollY - headerH;
+        window.scrollTo({ top, behavior: 'smooth' });
+      });
+    });
+  </script>
+
+</body>
+</html>
