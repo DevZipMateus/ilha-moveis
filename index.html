@@ -566,6 +566,20 @@
       line-height: 1.6;
     }
 
+    /* ===== VITRINE IFRAME ===== */
+    .vitrine-wrap {
+      margin-top: 56px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(44,26,14,0.12);
+    }
+
+    .vitrine-wrap iframe {
+      display: block;
+      width: 100%;
+      border: none;
+    }
+
     /* ===== DIFERENCIAIS ===== */
     #diferenciais {
       padding: 100px 0;
@@ -1255,6 +1269,17 @@
         </article>
 
       </div>
+
+      <!-- Vitrine online -->
+      <div class="vitrine-wrap">
+        <iframe
+          id="vitrineIframe"
+          src="https://ilha_moveis.egestor.com.br/vitrine/"
+          title="Vitrine online — Ilha Móveis e Colchões"
+          allowfullscreen
+        ></iframe>
+      </div>
+
     </div>
   </section>
 
@@ -1528,6 +1553,17 @@
     window.addEventListener('scroll', () => {
       hdr.classList.toggle('scrolled', window.scrollY > 60);
     }, { passive: true });
+
+    // ===== VITRINE IFRAME ALTURA DINÂMICA =====
+    function setVitrineHeight() {
+      const iframe = document.getElementById('vitrineIframe');
+      if (!iframe) return;
+      const headerH = 80;
+      const badgeH  = 63;
+      iframe.style.height = (window.innerHeight - headerH - badgeH) + 'px';
+    }
+    setVitrineHeight();
+    window.addEventListener('resize', setVitrineHeight, { passive: true });
 
     // ===== SCROLL SUAVE PARA ÂNCORAS =====
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
